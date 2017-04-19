@@ -75,7 +75,6 @@
       <version>${spring.framework.version}</version>
     </dependency>
 
-
     <dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
@@ -197,7 +196,7 @@
                     </configuration>
                 </execution>
                 <execution>
-                    <id>npm watch</id>
+                    <id>npm run watch</id>
                     <goals>
                         <goal>npm</goal>
                     </goals>
