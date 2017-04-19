@@ -4,9 +4,9 @@ export function fetchUsers() {
     return function(dispatch) {
         // axios.get('/rest/users/getAll')
         // axios.get('http://rest.learncode.academy/api/wstern/users')
-        axios.get('http://localhost:3000/users')
+        axios.get('http://localhost:3000/db')
             .then((response) => {
-                dispatch({type: 'FETCH_USERS_FULFILLED', payload: response.data})
+                dispatch({type: 'FETCH_USERS_FULFILLED', payload: response.data.users})
             })
             .catch((err) => {
                 dispatch({type: 'FETCH_USERS_REJECTED', payload: err});

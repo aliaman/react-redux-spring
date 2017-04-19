@@ -3,11 +3,11 @@
     {
       "id": 1,
       "name": "Ali",
-      "salary": "10000"
+      "salary": "10001"
     },
     {
       "name": "Usman",
-      "salary": "5000",
+      "salary": "5001",
       "id": 2
     }
   ]

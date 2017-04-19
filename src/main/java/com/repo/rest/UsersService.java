@@ -28,7 +28,7 @@ public class UsersService {
         String json = "";
         try {
             JSONParser parser = new JSONParser();
-            Resource resource = new ClassPathResource("users.json");
+            Resource resource = new ClassPathResource("mock/db.json");
             //Use JSONObject for simple JSON and JSONArray for array of JSON.
             data = (JSONObject) parser.parse(
                     new FileReader(resource.getFile()));//path to the JSON file.

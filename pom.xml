@@ -9,8 +9,9 @@
   <url>http://maven.apache.org</url>
 
   <properties>
-    <spring.framework.version>4.0.4.RELEASE</spring.framework.version>
-    <jackson.version>2.3.3</jackson.version>
+      <spring.framework.version>4.0.4.RELEASE</spring.framework.version>
+      <jackson.version>2.3.3</jackson.version>
+      <client.working.directory>src/main/webapp</client.working.directory>
   </properties>
 
   <repositories>
@@ -187,19 +188,24 @@
                     </configuration>
                 </execution>
                 <execution>
-                    <id>npm install</id>
+                    <id>npm-install</id>
                     <goals>
                         <goal>npm</goal>
                     </goals>
                     <configuration>
+                        <workingDirectory>${client.working.directory}</workingDirectory>
                         <arguments>install</arguments>
                     </configuration>
                 </execution>
                 <execution>
-                    <id>npm run watch</id>
+                    <id>watch</id>
                     <goals>
                         <goal>npm</goal>
                     </goals>
+                    <configuration>
+                        <workingDirectory>${client.working.directory}</workingDirectory>
+                        <arguments>run build</arguments>
+                    </configuration>
                 </execution>
             </executions>
         </plugin>
