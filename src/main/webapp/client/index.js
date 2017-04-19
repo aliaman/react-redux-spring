@@ -7,7 +7,9 @@ import App from './components/App'
 import reducers from './redux/reducers/reducer'
 import middleware from './redux/middleware/middleware';
 
-// import './styles/style.scss';
+require('./styles/style.scss');
+
+
 let store = createStore(reducers, {}, middleware);
 if(__DEVELOPMENT__){
     console.log(`***************************************`);

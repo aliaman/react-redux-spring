@@ -22,7 +22,6 @@ export default class App extends React.Component {
         });
         return (
             <div style={{textAlign: 'left'}}>
-                <h1>Hello World!!!</h1>
                 <ul>
                     {userlist}
                 </ul>
