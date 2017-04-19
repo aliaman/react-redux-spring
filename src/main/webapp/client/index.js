@@ -8,10 +8,12 @@ import reducers from './redux/reducers/reducer'
 import middleware from './redux/middleware/middleware';
 
 // import './styles/style.scss';
-
-
-let store = createStore(reducers, {}, middleware)
-
+let store = createStore(reducers, {}, middleware);
+if(__DEVELOPMENT__){
+    console.log(`***************************************`);
+    console.log(`**************DEVELOPMENT**************`);
+    console.log(`***************************************`);
+}
 render(
     <Provider store={store}>
         <App />

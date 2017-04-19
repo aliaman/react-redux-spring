@@ -40,9 +40,9 @@
     "webpack-dev-server": "^2.4.2"
   },
   "scripts": {
-    "start": "webpack-dev-server  --host 0.0.0.0 --port 8081",
+    "start": "webpack-dev-server --host 0.0.0.0 --port 8081 --config webpack/webpack.dev.config.js",
     "mock": "json-server ../resources/mock/db.json",
-    "watch": "webpack --watch -d",
-    "build": "webpack --config webpack.config.js"
+    "watch": " webpack --watch -d",
+    "build": "webpack --config webpack/webpack.config.js"
   }
 }

@@ -1,7 +1,8 @@
 const path = require('path');
-
+var webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin'),
     ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
     template: './client/index.html',
     filename: 'index.html',
@@ -29,6 +30,9 @@ module.exports = {
     },
     plugins: [
         HtmlWebpackPluginConfig,
-        new ExtractTextPlugin('bundle.css')
+        new ExtractTextPlugin('bundle.css'),
+        new webpack.DefinePlugin({
+            __DEVELOPMENT__: false
+        }),
     ]
 }
